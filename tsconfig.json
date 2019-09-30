@@ -1,13 +1,26 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
-    "rootDir": "project/src/front-end/ts",
-    "noImplicitAny": true,
-    "noEmitOnError": true,
-    "sourceMap": false,
-    "module": "es6",
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "sourceMap": true,
+    "declaration": false,
+    "downlevelIteration": true,
+    "experimentalDecorators": true,
+    "module": "esnext",
     "moduleResolution": "node",
+    "importHelpers": true,
     "target": "es2015",
-    "showConfig": true,
-    "outDir": "./project/_public/js"
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "lib": [
+      "es2018",
+      "dom"
+    ]
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }

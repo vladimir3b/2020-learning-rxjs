@@ -1,0 +1,34 @@
+<mat-toolbar 
+    fxLayout="row"
+    fxLayoutAlign="space-between center"
+    color="primary">
+
+  <div>
+    {{ projectTitle }}
+  </div>
+  <div>
+    <ng-container *ngFor="let menuElement of menu">
+      <button 
+          [matMenuTriggerFor]="menu"
+          mat-button
+          *ngIf="menuElement.subMenu">
+        {{ menuElement.caption }}
+        <mat-menu #menu>
+            <button 
+                [routerLink]="menuSubElement.link"
+                *ngFor="let menuSubElement of menuElement.subMenu"    
+                mat-menu-item>
+              {{ menuSubElement.caption }}
+            </button>
+        </mat-menu>
+      </button>
+      <button 
+          [routerLink]="menuElement.link"
+          mat-button
+          *ngIf="!menuElement.subMenu">
+        {{ menuElement.caption }}
+      </button>
+    </ng-container>
+  </div>
+
+</mat-toolbar>
