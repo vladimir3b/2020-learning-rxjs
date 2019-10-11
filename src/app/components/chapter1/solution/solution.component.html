@@ -1,0 +1,31 @@
+<h1 class="mat-display-1">Chapter 1 - Introduction</h1>
+<h2>The Solution</h2>
+<div 
+    fxLayout="row"
+    fxLayoutGap=".5rem">
+  <button 
+      (click)="arrayButton()"
+      mat-raised-button 
+      color="accent">
+    Array
+  </button>
+  <button 
+      (click)="intervalButton()"
+      mat-raised-button 
+      color="accent">
+    Interval
+  </button>
+  <button 
+      (click)="ajaxButton()"
+      mat-raised-button 
+      color="accent">
+    Ajax request
+  </button>
+</div>
+<hr>
+<div>
+  <strong>
+    Result:
+  </strong>
+  {{ result }}
+</div>

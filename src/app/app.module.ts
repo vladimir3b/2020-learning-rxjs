@@ -8,12 +8,18 @@ import { AngularMaterialModule } from './modules/angular-material.module';
 import { AppHeaderComponent } from './components/app-header/app-header.component';
 import { Chapter1ProblemComponent } from './components/chapter1/problem/problem.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
+import { Chapter1SolutionComponent } from './components/chapter1/solution/solution.component';
+import { Chapter1BuildingBlocksComponent } from './components/chapter1/building-blocks/building-blocks.component';
+import { Chapter2CreatingObservablesComponent } from './components/chapter2/creating-observables/creating-observables.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     AppHeaderComponent,
     Chapter1ProblemComponent,
+    Chapter1SolutionComponent,
+    Chapter1BuildingBlocksComponent,
+    Chapter2CreatingObservablesComponent,
     HomePageComponent
   ],
   imports: [

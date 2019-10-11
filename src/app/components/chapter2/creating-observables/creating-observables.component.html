@@ -1,0 +1,39 @@
+<h1 class="mat-display-1">Chapter 2 - Creating Observables</h1>
+<h2>Creating Basic Observables</h2>
+<div 
+    fxLayout="row"
+    fxLayoutGap=".5rem">
+  <button 
+      (click)="createOf()"
+      mat-raised-button 
+      color="accent">
+    of()
+  </button> 
+  <button 
+      (click)="createEmpty()"
+      mat-raised-button 
+      color="accent">
+    EMPTY
+  </button> 
+  <button 
+      (click)="createNever()"
+      mat-raised-button 
+      color="accent">
+    NEVER
+  </button>
+  <button 
+      (click)="createThrowError()"
+      mat-raised-button 
+      color="accent">
+    throwError()
+  </button>  
+</div>
+<hr>
+<div *ngFor="let result of results; let i = index">
+  <strong>
+    Stream {{ i }}:
+  </strong>
+ {{ result }}
+</div>
+<hr *ngIf="results.length > 0">
+<canvas width="600" height="300" #drawingZone></canvas>

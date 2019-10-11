@@ -1,0 +1,49 @@
+<h1 class="mat-display-1">Chapter 1 - Introduction</h1>
+<h2>Building Blocks</h2>
+<div 
+    fxLayout="row"
+    fxLayoutGap=".5rem">
+  <button 
+      (click)="intervalButton()"
+      mat-raised-button 
+      color="accent">
+    interval
+  </button> 
+  <button 
+      (click)="takeButton()"
+      mat-raised-button 
+      color="accent">
+    take
+  </button> 
+  <button 
+      (click)="filterButton()"
+      mat-raised-button 
+      color="accent">
+    filter
+  </button>
+  <button 
+      (click)="takeFilterButton()"
+      mat-raised-button 
+      color="accent">
+    take -> filter
+  </button> 
+  <button 
+      (click)="filterTakeButton()"
+      mat-raised-button 
+      color="accent">
+    filter -> take
+  </button> 
+  <button 
+      (click)="unsubscribe()"
+      mat-raised-button 
+      color="accent">
+    unsubscribe them all
+  </button> 
+</div>
+<hr>
+<div *ngFor="let result of results; let i = index">
+  <strong>
+    Stream {{ i }}:
+  </strong>
+ {{ result }}
+</div>
