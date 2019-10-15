@@ -27,6 +27,42 @@
       color="accent">
     throwError()
   </button>  
+  <button 
+      (click)="createTimer()"
+      mat-raised-button 
+      color="accent">
+    timer()
+  </button>  
+  <button 
+      (click)="createFromArray()"
+      mat-raised-button 
+      color="accent">
+    from() -> ver 1
+  </button>  
+  <button 
+      (click)="createFromPromise()"
+      mat-raised-button 
+      color="accent">
+    from() -> ver 2
+  </button>
+  <button 
+      (click)="createAjax1()"
+      mat-raised-button 
+      color="accent">
+    ajax() - ver 1
+  </button>
+  <button 
+      (click)="createAjax2()"
+      mat-raised-button 
+      color="accent">
+    ajax() - ver 2
+  </button>
+  <button 
+      (click)="createCustomObservable()"
+      mat-raised-button 
+      color="accent">
+    custom
+  </button>
 </div>
 <hr>
 <div *ngFor="let result of results; let i = index">
