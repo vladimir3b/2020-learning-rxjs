@@ -41,6 +41,14 @@ export class AppComponent {
           {
             caption: 'Creating Basic Observables',
             link: '2-01'
+          },
+          {
+            caption: 'Subjects',
+            link: '2-02'
+          },
+          {
+            caption: 'Cold and Hot Observables',
+            link: '2-03'
           }
         ]
       }

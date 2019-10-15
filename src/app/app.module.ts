@@ -11,6 +11,8 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { Chapter1SolutionComponent } from './components/chapter1/solution/solution.component';
 import { Chapter1BuildingBlocksComponent } from './components/chapter1/building-blocks/building-blocks.component';
 import { Chapter2CreatingObservablesComponent } from './components/chapter2/creating-observables/creating-observables.component';
+import { Chapter2SubjectsComponent } from './components/chapter2/subjects/subjects.component';
+import { Chapter2ColdAndHotObservablesComponent } from './components/chapter2/cold-and-hot-observables/cold-and-hot-observables.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { Chapter2CreatingObservablesComponent } from './components/chapter2/crea
     Chapter1SolutionComponent,
     Chapter1BuildingBlocksComponent,
     Chapter2CreatingObservablesComponent,
+    Chapter2SubjectsComponent,
+    Chapter2ColdAndHotObservablesComponent,
     HomePageComponent
   ],
   imports: [

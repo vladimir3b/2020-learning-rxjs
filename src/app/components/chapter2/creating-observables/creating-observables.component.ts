@@ -10,7 +10,7 @@ import {
   from,
   Observable} from 'rxjs';
 import { ajax } from 'rxjs/ajax';
-import { map, tap } from 'rxjs/operators';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'fg-chapter2-creating-observables',
