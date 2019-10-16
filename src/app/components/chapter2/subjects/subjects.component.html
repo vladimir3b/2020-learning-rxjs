@@ -4,9 +4,71 @@
   fxLayout="row"
   fxLayoutGap=".5rem">
   <button 
+      (click)="subjectEmits()"
       mat-raised-button 
       color="accent">
     subject
   </button> 
+  <button
+      (click)="behaviorSubjectEmits()"
+      mat-raised-button 
+      color="accent">
+    behavior subject
+  </button> 
+  <button 
+      (click)="replaySubjectEmits()"
+      mat-raised-button 
+      color="accent">
+    replay subject
+  </button> 
+  <button 
+      [disabled]="asyncCompleted"
+      (click)="asyncSubjectEmits()"
+      mat-raised-button 
+      color="accent">
+    async subject
+  </button> 
+  <button 
+      [disabled]="asyncCompleted"
+      (click)='completeAsyncSubject()'
+      mat-raised-button
+      color="warn">
+    Complete async subject
+  </button>
+</div>
+<br>
+<div 
+  fxLayout="row"
+  fxLayoutGap=".5rem">
+  <button 
+      (click)="buttons[0] ? disconnectStream(0) : connectStream1()"
+      mat-raised-button 
+      color="{{ buttons[0] ? 'warn' :'primary' }}">
+    {{ buttons[0] ? 'disconnect from' : 'connect to' }} subject
+  </button> 
+  <button 
+      (click)="buttons[1] ? disconnectStream(1) : connectStream2()"
+      mat-raised-button 
+      color="{{ buttons[1] ? 'warn' :'primary' }}">
+    {{ buttons[1] ? 'disconnect from' : 'connect to' }} behavior subject
+  </button> 
+  <button 
+      (click)="buttons[2] ? disconnectStream(2) : connectStream3()"
+      mat-raised-button 
+      color="{{ buttons[2] ? 'warn' :'primary' }}">
+    {{ buttons[2] ? 'disconnect from' : 'connect to' }} replay subject
+  </button> 
+  <button 
+      (click)="buttons[3] ? disconnectStream(3) : connectStream4()"
+      mat-raised-button 
+      color="{{ buttons[3] ? 'warn' :'primary' }}">
+    {{ buttons[3] ? 'disconnect from' : 'connect to' }} async subject
+  </button> 
 </div>
 <hr>
+<div *ngFor="let result of results; let i = index">
+  <strong>
+    Stream {{ i }}:
+  </strong>
+ {{ result }}
+</div>
