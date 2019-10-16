@@ -8,8 +8,8 @@ import * as _ from 'lodash';
 })
 export class Chapter2SubjectsComponent implements OnInit, OnDestroy {
 
-  results: Array<string> = [];
   private _subscriptions: Array<Subscription> = [];
+  results: Array<string> = [];
   subject: Subject<number> = new Subject();
   behaviorSubject: BehaviorSubject<number> = new BehaviorSubject(-1);
   replaySubject: ReplaySubject<number> = new ReplaySubject();

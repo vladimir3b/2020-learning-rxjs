@@ -4,14 +4,18 @@
   fxLayout="row"
   fxLayoutGap=".5rem">
   <button 
+      (click)="connectedHot ? disconnectHot() : connectHot()"
       mat-raised-button 
-      color="accent">
-    cold
+      [color]="connectedHot ? 'warn' : 'accent'">
+    {{ connectedHot ? 'disconnect from' : 'connect to' }} hot
   </button> 
   <button 
+      (click)="connectedCold ? disconnectCold() : connectCold()"
       mat-raised-button 
-      color="accent">
-    hot
+      [color]="connectedCold ? 'warn' : 'accent'">
+      {{ connectedCold ? 'disconnect from' : 'connect to' }} cold
   </button>
 </div>
 <hr>
+<strong>Hot stream:</strong> {{ hotStream }} <br>
+<strong>Cold stream:</strong> {{ coldStream }}
