@@ -1,0 +1,51 @@
+<h1 class="mat-display-1">Chapter 3 - Using Operators</h1>
+<h2>Basic Operators</h2>
+<div 
+  fxLayout="row"
+  fxLayoutGap=".5rem">
+  <button 
+      #tapButton
+      (click)="tapOperator(tapButton)"
+      mat-raised-button 
+      color="accent">
+    tap()
+  </button> 
+  <button 
+      (click)="filterOperator()"
+      mat-raised-button 
+      color="accent">
+    filter()
+  </button>
+  <button 
+      (click)="takeOperator()"
+      mat-raised-button 
+      color="accent">
+    take()
+  </button>
+  <button 
+      (click)="takeLastOperator()"
+      mat-raised-button 
+      color="accent">
+    takeLast()
+  </button>
+  <button 
+      (click)="takeWhileOperator()"
+      mat-raised-button 
+      color="accent">
+    takeWhile()
+  </button>
+  <button 
+      #takeUntilButton
+      (click)="takeUntilOperator(takeUntilButton)"
+      mat-raised-button 
+      [color]="takeUntilClicked ? 'warn' : 'accent'">
+    {{ takeUntilClicked ? 'stop takeUntil() stream': 'takeUntil()' }}
+  </button>
+</div>
+<hr>
+<div *ngFor="let result of results; let i = index">
+  <strong>
+    Stream {{ i }}:
+  </strong>
+ {{ result }}
+</div>

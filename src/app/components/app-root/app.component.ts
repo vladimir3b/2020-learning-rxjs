@@ -51,6 +51,16 @@ export class AppComponent {
             link: '2-03'
           }
         ]
+      },
+      {
+        caption: 'Using Operators',
+        link: null,
+        subMenu: [
+          {
+            caption: 'Basic Operators',
+            link: '3-01'
+          }
+        ]
       }
     ]
   }

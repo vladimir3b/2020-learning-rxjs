@@ -7,6 +7,7 @@ import { Chapter1BuildingBlocksComponent } from './components/chapter1/building-
 import { Chapter2CreatingObservablesComponent } from './components/chapter2/creating-observables/creating-observables.component';
 import { Chapter2SubjectsComponent } from './components/chapter2/subjects/subjects.component';
 import { Chapter2ColdAndHotObservablesComponent } from './components/chapter2/cold-and-hot-observables/cold-and-hot-observables.component';
+import { Chapter3BasicOperatorsComponent } from './components/chapter3/basic-operators/basic-operators.component';
 
 
 const routes: Routes = [
@@ -37,6 +38,10 @@ const routes: Routes = [
   {
     path: '2-03',
     component: Chapter2ColdAndHotObservablesComponent
+  },
+  {
+    path: '3-01',
+    component: Chapter3BasicOperatorsComponent
   }
 ];
 
